@@ -78,8 +78,80 @@ int main() {
     printf("Densidade populacional: %.2f \n ", densidadePopulacionalA02);
     printf("PIB per capita: %f \n ", pibPerCapitaA02);
     printf("Poder final: %f \n", poderFinalA02);
+    int escolhaDoAtributo;
+    printf("Qual atributo você que comparar? \n");
+    printf("1 - população \n");
+    printf("2 - area \n");
+    printf("3 - PIB \n");
+    printf("4 - pontos turisticos \n");
+    printf("5 - densidade populacional \n");
+    printf("6 - PIB per capita \n");
+    printf("7 - Todos \n");
 
-    if (populacaoA01 > populacaoA02)
+    scanf("%d", &escolhaDoAtributo);
+    switch (escolhaDoAtributo)
+    {
+    case 1:
+        if (populacaoA01 > populacaoA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA02);
+
+        }
+        break;
+    case 2:
+        if (areaA01 > areaA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA02);
+
+        }
+        break;
+
+    case 3:
+        if (pibA01 > pibA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA02);
+
+        }
+        break;
+
+    case 4:
+        if (numDePontosTuristicosA01 > numDePontosTuristicosA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA02);
+
+        }
+        break;
+
+    case 5:
+        if (densidadePopulacionalA01 > densidadePopulacionalA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA02);
+
+        }
+        break;
+
+    case 6:
+        if (pibPerCapitaA01 > pibPerCapitaA02)
+        {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+        } else {
+            printf("Vitõria de %s \n", nomeDaCidadeA01);
+
+        }
+        break;
+    
+    case 7:
+       if (populacaoA01 > populacaoA02)
     {
         printf("%s, venceu \n", nomeDaCidadeA01);
         scoreA01 += 1;
@@ -139,5 +211,11 @@ int main() {
          printf("Cidade %s é a campeã \n", nomeDaCidadeA02);
     }
     
-    return 0;
+        break;
+    
+    default:
+        break;
+    }
+
+return 0;
 }
