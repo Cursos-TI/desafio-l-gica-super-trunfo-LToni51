@@ -39,7 +39,6 @@ int main() {
     densidadePopulacionalA01 = (float) populacaoA01 / areaA01;
     pibPerCapitaA01 = (float) pibA01 / populacaoA01;
     poderFinalA01 = (float)areaA01+pibA01+numDePontosTuristicosA01+densidadePopulacionalA01+pibPerCapitaA01;
-    
     printf("Densidade populacional: %.2f \n ", densidadePopulacionalA01);
     printf("PIB per capita: %f \n ", pibPerCapitaA01);
     printf ("poder final: %f\n", poderFinalA01);
@@ -74,10 +73,10 @@ int main() {
     densidadePopulacionalA02 = (float) populacaoA02 / areaA02;
     pibPerCapitaA02 = (float) pibA02 / populacaoA02;
     poderFinalA02 = populacaoA02+areaA02+pibA02+numDePontosTuristicosA02+densidadePopulacionalA02+pibPerCapitaA02;
-
     printf("Densidade populacional: %.2f \n ", densidadePopulacionalA02);
     printf("PIB per capita: %f \n ", pibPerCapitaA02);
     printf("Poder final: %f \n", poderFinalA02);
+    
     int escolhaDoAtributo;
     printf("Qual atributo você que comparar? \n");
     printf("1 - população \n");
