@@ -78,6 +78,7 @@ int main() {
     printf("Poder final: %f \n", poderFinalA02);
     
     int escolhaDoAtributo;
+    int escolhaDoAtributo2;
     printf("Qual atributo você que comparar? \n");
     printf("1 - população \n");
     printf("2 - area \n");
@@ -86,6 +87,7 @@ int main() {
     printf("5 - densidade populacional \n");
     printf("6 - PIB per capita \n");
     printf("7 - Todos \n");
+    printf("8 - Comparar atributos diferentes");
 
     scanf("%d", &escolhaDoAtributo);
     switch (escolhaDoAtributo)
@@ -211,6 +213,90 @@ int main() {
     }
     
         break;
+
+    case 8:
+    int choice;
+    int escolha2;
+    int attA;
+    int attB;
+        printf("Escolha o atributo da primeira carta\n");
+        printf("1 - população \n");
+        printf("2 - area \n");
+        printf("3 - PIB \n");
+        printf("4 - pontos turisticos \n");
+        printf("5 - densidade populacional \n");
+        printf("6 - PIB per capita \n");
+        scanf("%d", &choice);
+            switch (choice)
+            {
+            case 1:
+                attA = populacaoA01;
+                break;
+            case 2:
+                attA = areaA01;
+                break;
+            case 3:
+                attA = pibA01;
+                break;
+            case 4:
+                attA = numDePontosTuristicosA01;    
+                break;
+            case 5:
+                attA = densidadePopulacionalA01;    
+                break;
+            case 6:
+                attA = pibPerCapitaA01;
+
+            default:
+                printf("numero invalido");
+                break;
+            }
+
+        printf("Escolha o atributo da segunda carta\n");
+        printf("1 - população \n");
+        printf("2 - area \n");
+        printf("3 - PIB \n");
+        printf("4 - pontos turisticos \n");
+        printf("5 - densidade populacional \n");
+        printf("6 - PIB per capita \n");
+        scanf("%d", escolha2);
+        switch (escolha2)
+            {
+            case 1:
+                attB = populacaoA02;
+                break;
+            case 2:
+                attB = areaA02;
+                break;
+            case 3:
+                attB = pibA02;
+                break;
+            case 4:
+                attB = numDePontosTuristicosA02;    
+                break;
+            case 5:
+                attB = densidadePopulacionalA02;    
+                break;
+            case 6:
+                attB = pibPerCapitaA02;
+
+            default:
+                printf("numero invalido");
+                break;
+            }
+            
+            if (attA > attB)
+            {
+                printf("Vitoria da primeira carta");
+            } else if(attA == attB){
+                printf("empate");
+            } else {
+                printf("vitoria da segunda carta");
+            }
+
+            
+
+
     
     default:
         break;
