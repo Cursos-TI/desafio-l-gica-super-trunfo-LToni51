@@ -13,15 +13,18 @@ int agilidade02 = 63;
 int resistencia02 = 14;
 int forca02 = 39;
 int velocidade02 = 93;
+int poderMaximo02;
 int seletorA;
 int seletorB;
 int seletorC;
+int seletorD;
+
 
 
 printf("Quantos atributos você quer comparar?\n");
 printf("1 - Um atributo\n");
-printf("1 - Dois atributos\n");
-printf("1 - Todos atributos\n");
+printf("2 - Dois atributos\n");
+printf("3 - Todos atributos\n");
 scanf("%d", &seletorA);
 switch (seletorA)
 {
@@ -32,6 +35,7 @@ case 1:
     printf("3 - resistencia\n");
     printf("4 - força\n");
     printf("5 - velocidade\n");
+    scanf("%d", &seletorB);
          
         switch (seletorB)
         {
@@ -96,9 +100,101 @@ case 1:
             break;
         }
 
-
+int attA;
+int attB;
 case 2:
+    printf("escolha o primeiro atributo");
+    printf("1 - inteligencia\n");
+    printf("2 - agilidade\n");
+    printf("3 - resistencia\n");
+    printf("4 - força\n");
+    printf("5 - velocidade\n");
+    scanf("%d", &seletorC);
+        switch (seletorC)
+        {
+        case 1:
+            attB = (inteligencia01 > inteligencia02);
+            printf("1 - inteligencia\n");
+            break;
+
+        case 2:
+            attB = (agilidade01 > agilidade02);
+            printf("2 - agilidade\n");
+            break;
+        
+
+        case 3:
+            attB = (resistencia01 > resistencia02);
+            printf("3 - resistencia\n");
+            break;
+
+        case 4:
+            attB = (forca01 > forca02);
+            printf("4 - força\n");
+            break;
+
+        case 5:
+            attB = (velocidade01 > velocidade02);
+            printf("5 - velocidade\n");
+            break;
+        default:
+            printf("invalido");
+            break;
+        }
     
+        printf("escolha o segundo atributo");
+        printf("1 - inteligencia\n");
+        printf("2 - agilidade\n");
+        printf("3 - resistencia\n");
+        printf("4 - força\n");
+        printf("5 - velocidade\n");
+        scanf("%d", &seletorD);
+            switch (seletorC)
+            {
+            case 1:
+                attA = (inteligencia01 > inteligencia02);
+                printf("1 - inteligencia\n");
+                break;
+    
+            case 2:
+                attA = (agilidade01 > agilidade02);
+                printf("2 - agilidade\n");
+                break;
+            
+    
+            case 3:
+                attA = (resistencia01 > resistencia02);
+                printf("3 - resistencia\n");
+                break;
+    
+            case 4:
+                attA = (forca01 > forca02);
+                printf("4 - força\n");
+                break;
+    
+            case 5:
+                attA = (velocidade01 > velocidade02);
+                printf("5 - velocidade\n");
+                break;
+            default:
+                printf("invalido");
+                break;
+            }
+
+            if (attA && attB)
+            {
+                printf("vitoria do jogador 1");
+            } else if (attA || attB)
+            {
+                printf("empte");
+            }else{
+                printf("vitoria do jogador 2");
+                
+            }
+            
+            
+
+        
 
 default:
     break;
