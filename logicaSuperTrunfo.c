@@ -17,6 +17,10 @@ int main() {
     float pibPerCapitaA01;
     int scoreA01;
     float poderFinalA01;
+    int choice;
+    int escolha2;
+    int attA;
+    int attB;
     printf("Bem vindo ao super trunfo! Por favor cadastre a cidade que deseja! \n");
     printf("Qual o nome da cidade? \n");
     scanf("%s", nomeDaCidadeA01);
@@ -215,10 +219,6 @@ int main() {
         break;
 
     case 8:
-    int choice;
-    int escolha2;
-    int attA;
-    int attB;
         printf("Escolha o atributo da primeira carta\n");
         printf("1 - população \n");
         printf("2 - area \n");
@@ -259,7 +259,7 @@ int main() {
         printf("4 - pontos turisticos \n");
         printf("5 - densidade populacional \n");
         printf("6 - PIB per capita \n");
-        scanf("%d", escolha2);
+        scanf("%d", &escolha2);
         switch (escolha2)
             {
             case 1:
